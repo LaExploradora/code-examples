@@ -1,0 +1,77 @@
+.splitSubtitle {
+  @include l20();
+
+  color: #000;
+  margin: 0 0 16px;
+  padding: 0 0 16px;
+}
+
+.splitGraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  margin-top: 16px;
+  border-radius: 8px;
+  gap: 8px;
+  background-color: #f5f5f5;
+}
+
+.splitGraphItem {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: #adadad !important;
+  width: 100%;
+  max-width: 130px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #00000014;
+    border-radius: 6px;
+  }
+
+  &:first-child::after {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #2747ae;
+    border-radius: 6px;
+  }
+
+  &:first-child {
+    color: #000 !important;
+  }
+}
+
+.splitGraphItemTitle {
+  @include s20();
+
+  margin: 0 0 4px;
+}
+
+.splitGraphItemPrice {
+  @include m10();
+
+  margin: 0 0 12px;
+}
+
+.info {
+  @include s20();
+
+  color: #5c5c5c;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.infoLink {
+  font-weight: 500;
+  color: #213fb4;
+  border-bottom: 2px solid #213fb4;
+}

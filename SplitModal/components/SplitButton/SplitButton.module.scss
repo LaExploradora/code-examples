@@ -1,0 +1,35 @@
+.splitButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0000000a;
+  height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+
+  @include m10();
+
+  color: #000;
+  margin: 0;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.splitIcon {
+  width: 68px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.splitChevron {
+  width: 16px;
+  height: 16px;
+}

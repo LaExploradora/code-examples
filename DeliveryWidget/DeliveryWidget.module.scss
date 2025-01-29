@@ -1,0 +1,75 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: 2px solid color(pp_xlight_gray);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: color(brand_black);
+  @include mediaQuery(tablet) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  @include mediaQuery(desktop) {
+    margin-bottom: 32px;
+  }
+
+  h5 {
+    @include l20();
+
+    margin: 0;
+  }
+
+  h6 {
+    @include m20();
+
+    margin: 0 0 8px;
+  }
+
+  .loader {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .deliveryProvidersWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .deliveryProvider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      max-width: 145px;
+      width: 100%;
+      padding: 16px 32px;
+      background-color: color(pp_xxlight_gray_black);
+      border: 1px solid color(pp_xxlight_gray_black);
+      border-radius: 4px;
+      transition: border 150ms ease-in-out;
+      cursor: pointer;
+
+      @include mediaQuery(tablet) {
+        max-width: 184px;
+      }
+
+      &.active {
+        border: 1px solid #2747ae;
+      }
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+
+      .deliveryProviderLogo {
+        width: auto;
+        height: 16px;
+      }
+    }
+  }
+}
